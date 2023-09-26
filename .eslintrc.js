@@ -3,7 +3,11 @@ module.exports = {
     browser: true,
     es2021: true,
   },
-  extends: ["standard-with-typescript", "plugin:react/recommended"],
+  extends: [
+    "standard-with-typescript",
+    "plugin:react/recommended",
+    "plugin:i18next/recommended",
+  ],
   overrides: [
     {
       env: {
@@ -20,7 +24,7 @@ module.exports = {
       version: "detect",
     },
   },
-  plugins: ["react"],
+  plugins: ["react", "@typescript-eslint", "i18next"],
   parserOptions: {
     parser: "@typescript-eslint/parser",
     project: "./tsconfig.json",
@@ -56,6 +60,7 @@ module.exports = {
     "@typescript-eslint/strict-boolean-expressions": "off",
     "react/react-in-jsx-scope": "off",
     "react/jsx-uses-react": "off",
+    "i18next/no-literal-string": ["error", { markupOnly: true }],
   },
   globals: {
     _IS_DEV_: true,

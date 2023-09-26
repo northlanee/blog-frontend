@@ -1,6 +1,7 @@
 import { FC } from "react";
 import { classNames } from "@/shared/lib/classNames";
 import { AppLink, AppLinkTheme } from "@/shared/ui/AppLink";
+import { useTranslation } from "react-i18next";
 
 import styles from "./Navbar.module.scss";
 
@@ -9,6 +10,8 @@ interface NavbarProps {
 }
 
 const Navbar: FC<NavbarProps> = ({ className }) => {
+  const { t } = useTranslation();
+
   return (
     <div className={classNames(styles.navbar, {}, [className])}>
       <div className={styles.links}>
@@ -17,10 +20,10 @@ const Navbar: FC<NavbarProps> = ({ className }) => {
           to="/"
           className={styles.mainLink}
         >
-          Main Page
+          {t("mainPage")}
         </AppLink>
         <AppLink theme={AppLinkTheme.SECONDARY} to="/about">
-          About Page
+          {t("aboutPage")}
         </AppLink>
       </div>
     </div>
