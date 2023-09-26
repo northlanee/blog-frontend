@@ -1,5 +1,5 @@
 import { type FC, useState } from "react";
-import { classNames } from "@/shared/lib/classNames";
+import { classNames } from "@/shared/lib";
 
 import styles from "./Sidebar.module.scss";
 import { ThemeSwitcher } from "@/widgets/ThemeSwitcher";

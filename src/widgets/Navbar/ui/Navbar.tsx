@@ -1,5 +1,5 @@
 import { FC } from "react";
-import { classNames } from "@/shared/lib/classNames";
+import { classNames } from "@/shared/lib";
 import { AppLink, AppLinkTheme } from "@/shared/ui/AppLink";
 import { useTranslation } from "react-i18next";
 
