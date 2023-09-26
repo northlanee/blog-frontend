@@ -20,7 +20,7 @@ export const buildWebpackConfig = (
       path: build,
       clean: true,
     },
-    plugins: plugins(paths),
+    plugins: plugins(options),
     module: {
       rules: loaders(options),
     },
