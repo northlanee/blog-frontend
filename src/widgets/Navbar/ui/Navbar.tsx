@@ -3,6 +3,7 @@ import { classNames } from "@/shared/lib/classNames";
 import { AppLink, AppLinkTheme } from "@/shared/ui/AppLink";
 
 import styles from "./Navbar.module.scss";
+import { ThemeSwitcher } from "@/widgets/ThemeSwitcher";
 
 interface NavbarProps {
   className?: string;
@@ -11,6 +12,7 @@ interface NavbarProps {
 const Navbar: FC<NavbarProps> = ({ className }) => {
   return (
     <div className={classNames(styles.navbar, {}, [className])}>
+      <ThemeSwitcher className={styles.themeSwitcher} />
       <div className={styles.links}>
         <AppLink
           theme={AppLinkTheme.SECONDARY}
