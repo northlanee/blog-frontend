@@ -8,6 +8,7 @@ import { useTheme } from "./providers/ThemeProvider";
 import { classNames } from "@/shared/lib/classNames";
 
 import "./styles/index.scss";
+import { AppRouter } from "./providers/router";
 
 const App = () => {
   const { theme, toggleTheme } = useTheme();
@@ -18,12 +19,7 @@ const App = () => {
       <Link to="/">Main Page</Link>
       <Link to="/about">About Page</Link>
 
-      <Suspense fallback={<div>Loading...</div>}>
-        <Routes>
-          <Route path="/about" element={<AboutPage />} />
-          <Route path="/" element={<MainPage />} />
-        </Routes>
-      </Suspense>
+      <AppRouter />
     </div>
   );
 };
