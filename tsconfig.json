@@ -10,12 +10,13 @@
     "esModuleInterop": true,
     "allowSyntheticDefaultImports": true,
     "baseUrl": ".",
+    "strictNullChecks": true,
     "paths": {
       "@/*": ["./src/*"]
     }
   },
   "exclude": ["node_modules"],
-  "include": ["src"],
+  "include": ["src", "."],
   "ts-node": {
     "compilerOptions": {
       "module": "CommonJS"

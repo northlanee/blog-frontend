@@ -1,4 +1,4 @@
-import { FC, useState } from "react";
+import { type FC, useState } from "react";
 import { classNames } from "@/shared/lib/classNames";
 
 import styles from "./Sidebar.module.scss";
@@ -12,7 +12,9 @@ interface SidebarProps {
 const Sidebar: FC<SidebarProps> = ({ className }) => {
   const [collapsed, setCollapsed] = useState(false);
 
-  const toggleHandler = () => setCollapsed((prev) => !prev);
+  const toggleHandler = () => {
+    setCollapsed((prev) => !prev);
+  };
 
   return (
     <div

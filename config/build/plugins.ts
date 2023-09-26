@@ -1,13 +1,14 @@
 import webpack from "webpack";
 import HTMLWebpackPlugin from "html-webpack-plugin";
 import MiniCssExtractPlugin from "mini-css-extract-plugin";
+import ReactRefreshWebpackPlugin from "@pmmmwh/react-refresh-webpack-plugin";
 import { BuildOptions } from "./types";
 
 export const plugins = ({
   paths,
   isDev,
 }: BuildOptions): webpack.WebpackPluginInstance[] => {
-  return [
+  const plugins = [
     new webpack.ProgressPlugin(),
     new HTMLWebpackPlugin({
       template: paths.html,
@@ -17,7 +18,14 @@ export const plugins = ({
       chunkFilename: "css/[name].[contenthash:8].css",
     }),
     new webpack.DefinePlugin({
-      __IS_DEV__: JSON.stringify(isDev),
+      _IS_DEV_: JSON.stringify(isDev),
     }),
   ];
+
+  if (isDev) {
+    plugins.push(new ReactRefreshWebpackPlugin());
+    plugins.push(new webpack.HotModuleReplacementPlugin());
+  }
+
+  return plugins;
 };
