@@ -16,7 +16,7 @@
     }
   },
   "exclude": ["node_modules"],
-  "include": ["src", ".", "./config/jest/setupTests.ts"],
+  "include": ["."],
   "ts-node": {
     "compilerOptions": {
       "module": "CommonJS"
