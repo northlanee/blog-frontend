@@ -2,6 +2,8 @@ import webpack from "webpack";
 import HTMLWebpackPlugin from "html-webpack-plugin";
 import MiniCssExtractPlugin from "mini-css-extract-plugin";
 import ReactRefreshWebpackPlugin from "@pmmmwh/react-refresh-webpack-plugin";
+import { BundleAnalyzerPlugin } from "webpack-bundle-analyzer";
+import CopyPlugin from "copy-webpack-plugin";
 import { BuildOptions } from "./types";
 
 export const plugins = ({
@@ -19,6 +21,12 @@ export const plugins = ({
     }),
     new webpack.DefinePlugin({
       _IS_DEV_: JSON.stringify(isDev),
+    }),
+    new BundleAnalyzerPlugin({
+      openAnalyzer: false,
+    }),
+    new CopyPlugin({
+      patterns: [{ from: "public/locales", to: "locales" }],
     }),
   ];
 

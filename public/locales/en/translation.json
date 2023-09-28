@@ -3,5 +3,8 @@
   "aboutPage": "About Page",
   "mainPage": "Main Page",
   "toggle": "Toggle",
-  "notFound": "Page Not Found"
+  "notFound": "Page Not Found",
+  "unexpectedError": "Unexpected error happens",
+  "pageRefresh": "Refresh page",
+  "throwError": "Throw Error"
 }

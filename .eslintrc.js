@@ -59,6 +59,7 @@ module.exports = {
     "@typescript-eslint/explicit-function-return-type": "off",
     "@typescript-eslint/consistent-type-imports": "off",
     "@typescript-eslint/strict-boolean-expressions": "off",
+    "@typescript-eslint/space-before-function-paren": "off",
     "react/react-in-jsx-scope": "off",
     "react/jsx-uses-react": "off",
     "i18next/no-literal-string": ["error", { markupOnly: true }],

@@ -3,8 +3,8 @@ import { classNames } from "@/shared/lib";
 import { AppRouter } from "./providers/router";
 import { Navbar } from "@/widgets/Navbar";
 import { Sidebar } from "@/widgets/Sidebar";
+import { FC, Suspense } from "react";
 import "./styles/index.scss";
-import { type FC, Suspense } from "react";
 
 const App: FC = () => {
   const { theme } = useTheme();
