@@ -22,9 +22,7 @@ export const plugins = ({
     new webpack.DefinePlugin({
       _IS_DEV_: JSON.stringify(isDev),
     }),
-    new BundleAnalyzerPlugin({
-      openAnalyzer: false,
-    }),
+
     new CopyPlugin({
       patterns: [{ from: "public/locales", to: "locales" }],
     }),
@@ -33,6 +31,11 @@ export const plugins = ({
   if (isDev) {
     plugins.push(new ReactRefreshWebpackPlugin());
     plugins.push(new webpack.HotModuleReplacementPlugin());
+    plugins.push(
+      new BundleAnalyzerPlugin({
+        openAnalyzer: false,
+      })
+    );
   }
 
   return plugins;
