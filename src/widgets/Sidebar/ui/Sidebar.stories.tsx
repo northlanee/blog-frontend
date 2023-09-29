@@ -6,7 +6,7 @@ import { Theme } from "@/app/providers/ThemeProvider";
 export default {
   title: "widget/Sidebar",
   component: Sidebar,
-} as Meta<typeof Sidebar>;
+} satisfies Meta<typeof Sidebar>;
 
 const Template: StoryFn<typeof Sidebar> = () => <Sidebar />;
 

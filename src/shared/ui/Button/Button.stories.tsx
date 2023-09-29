@@ -6,7 +6,7 @@ import { Theme } from "@/app/providers/ThemeProvider";
 export default {
   title: "shared/Button",
   component: Button,
-} as Meta<typeof Button>;
+} satisfies Meta<typeof Button>;
 
 const Template: StoryFn<typeof Button> = (args) => <Button {...args} />;
 

@@ -6,7 +6,7 @@ import { Theme } from "@/app/providers/ThemeProvider";
 export default {
   title: "shared/AppLink",
   component: AppLink,
-} as Meta<typeof AppLink>;
+} satisfies Meta<typeof AppLink>;
 
 const Template: StoryFn<typeof AppLink> = (args) => <AppLink {...args}>Link</AppLink>;
 

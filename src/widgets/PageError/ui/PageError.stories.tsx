@@ -6,7 +6,7 @@ import { Theme } from "@/app/providers/ThemeProvider";
 export default {
   title: "widget/PageError",
   component: PageError,
-} as Meta<typeof PageError>;
+} satisfies Meta<typeof PageError>;
 
 const Template: StoryFn<typeof PageError> = () => <PageError />;
 

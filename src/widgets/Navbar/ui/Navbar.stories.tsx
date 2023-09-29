@@ -6,7 +6,7 @@ import { Theme } from "@/app/providers/ThemeProvider";
 export default {
   title: "widget/Navbar",
   component: Navbar,
-} as Meta<typeof Navbar>;
+} satisfies Meta<typeof Navbar>;
 
 const Template: StoryFn<typeof Navbar> = () => <Navbar />;
 

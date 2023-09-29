@@ -1,4 +1,3 @@
-import { resolvers } from "config/build/resolvers";
 import { getCssLoader } from "../build/loaders/cssLoader";
 import { BuildPaths } from "../build/types";
 import path from "path";

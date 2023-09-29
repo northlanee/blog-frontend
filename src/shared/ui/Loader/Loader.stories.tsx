@@ -6,7 +6,7 @@ import { Theme } from "@/app/providers/ThemeProvider";
 export default {
   title: "shared/PageError",
   component: Loader,
-} as Meta<typeof Loader>;
+} satisfies Meta<typeof Loader>;
 
 const Template: StoryFn<typeof Loader> = () => <Loader />;
 

@@ -8,18 +8,7 @@ module.exports = {
     "standard-with-typescript",
     "plugin:react/recommended",
     "plugin:i18next/recommended",
-    "plugin:storybook/recommended"
-  ],
-  overrides: [
-    {
-      env: {
-        node: true,
-      },
-      files: [".eslintrc.{js,cjs}"],
-      parserOptions: {
-        sourceType: "script",
-      },
-    },
+    "plugin:storybook/recommended",
   ],
   settings: {
     react: {
@@ -65,6 +54,23 @@ module.exports = {
     "react/jsx-uses-react": "off",
     "i18next/no-literal-string": ["error", { markupOnly: true }],
   },
+  overrides: [
+    {
+      env: {
+        node: true,
+      },
+      files: [".eslintrc.{js,cjs}"],
+      parserOptions: {
+        sourceType: "script",
+      },
+    },
+    {
+      files: ["*.stories.tsx"],
+      rules: {
+        "i18next/no-literal-string": "off",
+      },
+    },
+  ],
   globals: {
     _IS_DEV_: true,
   },
